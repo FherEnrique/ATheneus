@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('users/', 'UserController@array');
+/*Route::get('hola/{id}', function($id){//obligatorio
+    return "Bienvenido useer ".$id;
+});
+Route::get('hol/{id?}', function($id = null){//opcional
+    return "Bienvenido useer ".$id;
+});*/
+//Route::get('users/{id}', 'UserController@show');
+//Route::get('/', 'UserController@saluda');
