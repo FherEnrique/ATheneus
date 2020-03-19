@@ -14,7 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('users/', 'UserController@array');
+
+Route::get('pruebas/', 'VistasController@array');
+
+Route::get('jugar/','VistasController@play');
+
+Route::get('acerca de/','VistasController@about');
+
+Route::post('jugar/random/','personajeController@generar')->name('random');
+
+Route::post('jugar/personas/','personajeController@tomar')->name('personas');
+
 /*Route::get('hola/{id}', function($id){//obligatorio
     return "Bienvenido useer ".$id;
 });
