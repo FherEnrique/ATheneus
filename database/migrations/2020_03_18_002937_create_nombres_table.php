@@ -15,7 +15,7 @@ class CreateNombresTable extends Migration
     {
         Schema::create('nombres', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre',50);
+            $table->string('nombre',50)->unique();
             $table->char('sexo');
             $table->timestamps();
         });

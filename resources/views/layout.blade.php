@@ -1,15 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
     <title>ATheneus - el juego</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/cover/">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -25,26 +20,13 @@
     <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">-->
     <link rel="icon" type="image/png" href="./css/favicon.png">
     <meta name="theme-color" content="#563d7c">
-
-
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('./css/cover.css') }}" rel="stylesheet">
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+        body{
+            box-shadow: none !important;
         }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="./css/cover.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
@@ -53,13 +35,13 @@
             <div class="inner">
                 <h3 class="masthead-brand">ATheneus</h3>
                 <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Jugar</a>
-                <a class="nav-link" href="{{url('')}}">Acerca de</a>
+                    <a class="nav-link" href="{{url('jugar/')}}">Jugar</a>
+                <a class="nav-link" href="{{url('acerca de/')}}">Acerca de</a>
                 </nav>
             </div>
         </header>
 
-        <main role="main" class="inner cover">
+        <main role="main">
             @yield('content')
         </main>
 
