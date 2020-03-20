@@ -9,19 +9,11 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- Favicons 
-    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">-->
-    <link rel="icon" type="image/png" href="./css/favicon.png">
-    <meta name="theme-color" content="#563d7c">
+    <script src="https://kit.fontawesome.com/49d42b70f8.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="{{ asset('css/favicon.png') }}">
+    
     <!-- Custom styles for this template -->
-    <link href="{{ asset('./css/cover.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/cover.css') }}" rel="stylesheet">
     <style>
         body{
             box-shadow: none !important;
