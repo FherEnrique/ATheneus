@@ -18,6 +18,9 @@
         body{
             box-shadow: none !important;
         }
+        .new5{
+            border-top: 5px dotted white;
+        }
     </style>
 </head>
 

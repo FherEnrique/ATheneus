@@ -36,4 +36,7 @@ class VistasController extends Controller
     public function game(){
         return view('game');
     }
+    public function win(){
+        return view('winners');
+    }
 }
