@@ -27,6 +27,8 @@ Route::post('jugar/personas/','personajeController@tomar')->name('personas');
 
 Route::get('historia/','VistasController@game')->name('game');
 
+Route::get('ganador/','VistasController@win');
+
 /*Route::get('hola/{id}', function($id){//obligatorio
     return "Bienvenido useer ".$id;
 });

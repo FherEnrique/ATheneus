@@ -15,7 +15,7 @@ class personajeController extends Controller
             $nombre2 = DB::select('SELECT nombre FROM nombres WHERE sexo = ?', ['f']);
             for ($i=0; $i < 10; $i++) { 
                 $actual = array(
-                    'nombre' => $nombre[rand(0,count($nombre))]->nombre,
+                    'nombre' => $nombre[rand(0,count($nombre)-1)]->nombre,
                     'salud' => 100, //AQUI CAMBIE
                     'sexo' => 'm',
                     'arbol' => 0,
@@ -23,7 +23,7 @@ class personajeController extends Controller
                     'dias' => 0
                 );
                 $actual2 = array(
-                    'nombre' => $nombre2[rand(0,count($nombre2))]->nombre,
+                    'nombre' => $nombre2[rand(0,count($nombre2)-1)]->nombre,
                     'salud' => 100, //AQUI CAMBIE
                     'sexo' => 'f',
                     'arbol' => 0,
