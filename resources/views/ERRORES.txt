@@ -28,3 +28,7 @@
     
     <input type="text" name="chico[]" id="chico{{ $i }}" class="form-control" required>  <br>
                 <input type="text" name="chica[]" id="chica{{ $i }}" class="form-control" required> <br><br> 
+                
+                APlicacion de arboles
+                APlicacion PDF
+                

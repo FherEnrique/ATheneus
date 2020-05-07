@@ -33,13 +33,21 @@
             <?php
             $accion = array(); //Ver las aciones de ahora
             $final = array(); //Para enviar a la sesion con los datos de salud actualizados
-            $amor = DB::select("SELECT cant_personajes, salud, descripcion FROM acciones");
             foreach ($aux as $key) {
+                if ($key->arbol != 0) {
+                    $amor = DB::select("SELECT a.id, a.cant_personajes, a.salud, a.descripcion FROM auxiliares x INNER JOIN acciones a ON x.id_hijo = a.id WHERE x.id_padre = ".$key->arbol);  
+                }else{
+                    $amor = DB::select("SELECT a.id, cant_personajes,salud,descripcion FROM acciones a LEFT JOIN auxiliares x ON a.id = x.id_hijo WHERE x.id_hijo IS NULL");
+                }
                 $indice = rand(0, count($amor)-1);
                 array_push($accion, $key->nombre." realiza la ".$amor[$indice]->descripcion);
                 $key->salud = $key->salud + $amor[$indice]->salud;
                 $key->salud = ($key->salud < 0) ? 0 : $key->salud;
                 $key->salud = ($key->salud > 100) ? 100 : $key->salud;
+                $super = DB::select("SELECT id FROM auxiliares WHERE id_padre = ".$amor[$indice]->id);
+                if (count($super) != 0) {
+                    $key->arbol = $amor[$indice]->id;
+                }
                 array_push($final, $key);
             }
             ?>
@@ -69,7 +77,6 @@
             @else
                 <input type="submit" value="siguiente dia ->" class="btn btn-light">
             @endif
-            
         </form>
         
         
