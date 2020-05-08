@@ -36,7 +36,7 @@ class personajeController extends Controller
             session(['listaVivo' => json_encode($listaVivo), 'diaActual' => 1, 'listaMuerto' => json_encode(array())]);
             return redirect()->to('historia/')->send();
         } catch (\Throwable $th) {
-            echo "alert('Se ha producido un error volver a ingresarlo')";
+            //echo $th;
             return redirect()->to('jugar/')->send();
         }
     }
