@@ -24,7 +24,7 @@ class personajeController extends Controller
                 );
                 $actual2 = array(
                     'nombre' => $nombre2[rand(0,count($nombre2)-1)]->nombre,
-                    'salud' => 100, //AQUI CAMBIE
+                    'salud' => 99, //AQUI CAMBIE
                     'sexo' => 'f',
                     'arbol' => 0,
                     'compi' => 0,
